@@ -1,4 +1,4 @@
-package GUI;
+package openEngine;
 
 import java.awt.BorderLayout;
 import java.awt.Graphics;

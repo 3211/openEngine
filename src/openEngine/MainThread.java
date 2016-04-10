@@ -1,5 +1,4 @@
-package GUI;
-import openEngine.CurrentProgram;
+package openEngine;
 
 public class MainThread{
 	CurrentProgram currentProgram;
