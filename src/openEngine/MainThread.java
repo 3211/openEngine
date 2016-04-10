@@ -1,6 +1,7 @@
 package openEngine;
 /**
  * A simple template for a functioning thread to call programDriver's ''update'' method.
+ * 
  * @author A.Audette
  * @version 1
  */

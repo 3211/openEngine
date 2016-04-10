@@ -1,8 +1,9 @@
 package openEngine;
-/*
+/**
  * Simple easily modified MainFrame (main window) class
  * Contains a canvas JPanel and functionality to quickly access:
  * Device Screen, Canvas Graphics etc
+ * 
  * @author A.Audette
  * @version 1
  */

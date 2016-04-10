@@ -2,6 +2,7 @@ package openEngine;
 /**
  * simple launcher for openEngine based programs, causes initialisation of:
  * MainThread, MainFrame and ProgramDriver
+ * 
  * @author A.Audette
  * @version 1
  */
