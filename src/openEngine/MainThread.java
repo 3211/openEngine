@@ -1,21 +1,35 @@
 package openEngine;
-
+/**
+ * A simple template for a functioning thread to call programDriver's ''update'' method.
+ * @author A.Audette
+ * @version 1
+ */
 public class MainThread{
-	CurrentProgram currentProgram;
+	ProgramDriver programDriver;
 	public static final int DEFAULT_MS = 256;
 	private boolean clockRunning;
-	private CoreThread coreThread;		
-    public MainThread(CurrentProgram currentProgram) {
-		if(currentProgram != null){
-			this.currentProgram = currentProgram;
+	private CoreThread coreThread;
+	/**
+	 * default constructor, initialises everything and starts the thread. 
+	 * @param programDriver
+	 */
+    public MainThread(ProgramDriver programDriver) {
+		if(programDriver != null){
+			this.programDriver = programDriver;
 		} else {
-			currentProgram = new CurrentProgram(new MainFrame());
+			programDriver = new ProgramDriver(new MainFrame());
 		}
 		startClock(true);
 	}
+    /**
+     * calls programDriver's update method
+     */
     public void update(){
-		currentProgram.update();
+		programDriver.update();
 	}
+    /**
+     * the custom thread itself
+     */
     private class CoreThread extends Thread    {
 		public void run()        {
             while (clockRunning) {
@@ -33,7 +47,10 @@ public class MainThread{
         }  
         
     }
-
+    /**
+     * simple method to start or stop the main thread
+     * @param runClock - false = stop, true = start
+     */
     public void startClock(boolean runClock){
         if (runClock == true){
             start();
@@ -41,14 +58,18 @@ public class MainThread{
             stop();
         }
     }
-    
+    /**
+     * starts the thread
+     */
     private void start()
     {
         clockRunning = true;
         coreThread = new CoreThread();
         coreThread.start();
     }
-    
+    /**
+     * stops the thread
+     */
     private void stop(){
         clockRunning = false;
     }
