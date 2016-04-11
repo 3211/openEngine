@@ -13,6 +13,7 @@ public class ResourceLoader {
 		try {
 		    img = ImageIO.read(rl.getClass().getResource("images/"+fileName));
 		} catch (IOException e) {
+			System.out.println(e.getMessage());
 		}
 		return img;
 		//return Toolkit.getDefaultToolkit().getImage(rl.getClass().getResource("images/"+fileName));
