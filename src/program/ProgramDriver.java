@@ -1,15 +1,16 @@
-package openEngine;
+package program;
+
+import openEngine.MainFrame;
+
 /**
- * This Class serves as the core program-driver when using open engine.
- * MainThread calls ProgramDriver's update ever DEFAULT_MS
- * ProgramDriver holds a reference to MainFrame to be used however the program needs
+ * your core program logic goes here.
+ * You have a JFrame "frame" to work with (customisable in openEngine.MainFrame)
+ * openEngine.MainThread calls update() ever BASE_MS (customisable in MainThread)
  * 
  * @author A.Audette
  * @version 1
  */
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.geom.Line2D;
+
 public class ProgramDriver {
 	MainFrame frame;
 	/**
@@ -17,12 +18,11 @@ public class ProgramDriver {
 	 * @param MainFrame - the frame to be set
 	 */
 	public ProgramDriver(MainFrame frame){
-		frame = this.frame;
+		this.frame = frame;
 	}
 	/**
 	 * The update method to be called by MainThread
 	 */
 	public void update(){
-
 	}
 }
